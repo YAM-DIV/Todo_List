@@ -1,0 +1,138 @@
+:root {
+    --color-1: #D16BA5;
+    --color-2: #86A8E7;
+    --color-3: #5FFBF1;
+    --color-4: #ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container-list {
+    position: relative;
+    width: 100%;
+}
+
+.titel-todo {
+    text-align: center;
+    margin: 25px 5px;
+    font-weight: 700;
+    color: var(--color-4);
+}
+
+.inputclass,
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputTodo,
+.todoBtn {
+    outline: none;
+    padding: 10px;
+    border: none;
+    font-size: 20px;
+}
+
+.inputTodo {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.inputTodo:focus {
+    border: 1px solid var(--color-1);
+}
+
+.todoBtn {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--color-2);
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-bottom: 20px;
+}
+
+.todoBtn:hover {
+    background-color: var(--color-1);
+    color: white;
+}
+
+.todo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin: 20px 5px;
+    padding: 5px 10px;
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.todo .todo-item {
+    flex: 1;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: capitalize;
+    color: black;
+    padding: 8px;
+}
+
+.todo .complete-btn,
+.todo .trash-btn {
+    font-size: 16px;
+    padding: 8px;
+    border: none;
+    background-color: var(--color-2);
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.todo .complete-btn {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: var(--color-1);
+}
+
+.todo .complete-btn:hover {
+    color: var(--color-3);
+}
+
+.todo .trash-btn {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.todo .trash-btn:hover {
+    color: var(--color-3);
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+.fa-trash, 
+.fa-check {
+    pointer-events: none;
+}
